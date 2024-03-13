@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="TrapIEDBase">
+    <defName>TrapIED_Stickyfoam</defName>
+    <label>IED stickyfoam trap</label>
+    <description>A pair of stickyfoam shells connected to a trigger which detonates on touch or bullet impact. Since it is hidden in the surrounding terrain, it cannot be placed adjacent to other traps. Animals can sense these when calm.</description>
+    <graphicData>
+      <texPath>Things/Building/Security/IEDStickyfoam</texPath>
+    </graphicData>
+    <uiOrder>47</uiOrder>
+    <costList>
+      <Shell_Stickyfoam>2</Shell_Stickyfoam>
+    </costList>
+    <!-- <designationHotKey>Misc10</designationHotKey> -->
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>6.9</explosiveRadius>
+        <explosiveDamageType>Stickyfoam</explosiveDamageType>
+        <startWickHitPointsPercent>0.2</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Filth_Stickyfoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>15</wickTicks>
+        <startWickOnDamageTaken>
+          <li>Bullet</li>
+          <li>Arrow</li>
+          <li>ArrowHighVelocity</li>
+        </startWickOnDamageTaken>
+      </li>
+    </comps>
+    <specialDisplayRadius>6.9</specialDisplayRadius>
+  </ThingDef>
+</Defs>

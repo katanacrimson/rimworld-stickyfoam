@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <DamageDef>
+    <defName>Stickyfoam</defName>
+    <label>stickyfoam</label>
+    <workerClass>Stickyfoam.DamageWorker_Sticky</workerClass>
+    <harmsHealth>false</harmsHealth>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>20</defaultDamage>
+    <hediff>CoveredInStickyfoam</hediff>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(1, 0.5, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <combatLogRules>Damage_Stickyfoamed</combatLogRules>
+  </DamageDef>
+</Defs>

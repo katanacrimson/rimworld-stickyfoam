@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  <ResearchProjectDef>
+    <defName>Stickyfoam</defName>
+    <label>stickyfoam</label>
+    <description>Develop stickyfoam munitions, a mobility-restricting asset intended to improve crowd control in response to fast approaching raids.</description>
+    <baseCost>800</baseCost>
+    <techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>Electricity</li>
+    </prerequisites>
+    <!-- todo: figure out a proper researchview coordinate -->
+    <researchViewX>7.00</researchViewX>
+    <researchViewY>1.25</researchViewY>
+  </ResearchProjectDef>
+</Defs>

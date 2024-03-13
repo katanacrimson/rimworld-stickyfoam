@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef>
+    <defName>CoveredInStickyfoam</defName>
+    <description>Covered in sticky foam, reducing mobility.</description>
+    <label>covered in stickyfoam</label>
+    <hediffClass>Stickyfoam.Hediff_CoveredInStickyfoam</hediffClass>
+    <stages>
+      <li>
+        <statFactors>
+          <!-- sticky foam slows pawns down - the extra weight and increased effort to move, tearing the foam as it rebonds to itself, results in a severe movement speed decrease -->
+          <MoveSpeed>0.60</MoveSpeed>
+
+          <!-- sticky foam impairs movement, which means swinging weapons (or avoiding attacks) is much harder -->
+          <MeleeHitChance>0.75</MeleeHitChance>
+          <MeleeDodgeChance>0.75</MeleeDodgeChance>
+
+          <!-- sticky foam would hinder movement, which in theory would impact adjustments to aiming, though aiming farther away means less movement, ergo less impact -->
+          <ShootingAccuracyFactor_Touch>0.80</ShootingAccuracyFactor_Touch>
+          <ShootingAccuracyFactor_Short>0.90</ShootingAccuracyFactor_Short>
+          <ShootingAccuracyFactor_Medium>0.95</ShootingAccuracyFactor_Medium>
+          <ShootingAccuracyFactor_Long>0.98</ShootingAccuracyFactor_Long>
+
+          <!-- sticky foam also obscures the target somewhat, and due to its expanding nature it ends up partially insulating against damage -->
+          <IncomingDamageFactor>0.75</IncomingDamageFactor>
+        </statFactors>
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>6000</disappearsAfterTicks>
+      </li>
+    </comps>
+    <forceRenderTreeRecache>true</forceRenderTreeRecache>
+    <renderNodeProperties>
+      <li Class="PawnRenderNodeProperties_Overlay">
+        <debugLabel>Stickyfoam</debugLabel>
+        <nodeClass>PawnRenderNode_Body</nodeClass>
+        <workerClass>Stickyfoam.PawnRenderNodeWorker_OverlayStickyfoam</workerClass>
+        <overlayLayer>Body</overlayLayer>
+        <baseLayer>41</baseLayer>
+      </li>
+      <li Class="PawnRenderNodeProperties_Overlay">
+        <debugLabel>Stickyfoam</debugLabel>
+        <nodeClass>PawnRenderNode_Head</nodeClass>
+        <workerClass>Stickyfoam.PawnRenderNodeWorker_OverlayStickyfoam</workerClass>
+        <overlayLayer>Head</overlayLayer>
+        <baseLayer>86</baseLayer>
+      </li>
+    </renderNodeProperties>
+  </HediffDef>
+</Defs>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <RulePackDef>
+    <defName>Damage_Stickyfoamed</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>damaged_past->glued to the ground</li>
+        <li>damaged_past->adhered in place</li>
+        <li>damaged_past->stickyfoamed</li>
+
+        <li>destroyed_past->damaged_past</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+</Defs>
