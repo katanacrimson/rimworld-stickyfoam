@@ -25,13 +25,13 @@ package:
   stage: 'package'
   script:
   - 'mkdir ${CI_PROJECT_TITLE}'
-  - 'cp -R 1.5 ${CI_PROJECT_TITLE}/'
-  - 'rm ${CI_PROJECT_TITLE}/1.5/.gitkeep'
   - 'cp -R About ${CI_PROJECT_TITLE}/'
-  - 'cp -R Defs ${CI_PROJECT_TITLE}/'
+  - 'cp -R 1.5 ${CI_PROJECT_TITLE}/'
   - 'cp -R Textures ${CI_PROJECT_TITLE}/'
-  # - 'cp -R ModPatches ${CI_PROJECT_TITLE}/'
+  - 'cp -R ModPatches ${CI_PROJECT_TITLE}/'
   - 'cp -R LoadFolders.xml ${CI_PROJECT_TITLE}/'
+  - 'cp -R LICENSE ${CI_PROJECT_TITLE}/'
+  - 'cp -R CHANGELOG.md ${CI_PROJECT_TITLE}/'
   - 'echo Packaging release…'
   artifacts:
     name: '${CI_PROJECT_TITLE}_$CI_COMMIT_TAG'

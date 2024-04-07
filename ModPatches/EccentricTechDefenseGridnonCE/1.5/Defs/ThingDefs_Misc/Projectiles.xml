@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- M43 PGM (Stickyfoam) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseArtilleryProjectile">
+    <defName>ETDG_Custom_Projectile_M43PGM</defName>
+    <label>M43 precision guided missile</label>
+    <graphicData>
+      <texPath>Eccentric/Things/Projectiles/Projectile_M43_Purple</texPath>
+    </graphicData>
+    <projectile>
+      <damageDef>Stickyfoam</damageDef>
+      <speed>40</speed>
+      <explosionRadius>9</explosionRadius>
+      <flyOverhead>true</flyOverhead>
+      <!-- <soundExplode>Explosion_EMP</soundExplode> -->
+      <postExplosionSpawnThingDef>Filth_Stickyfoam</postExplosionSpawnThingDef>
+      <postExplosionSpawnChance>1</postExplosionSpawnChance>
+      <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+      <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+      <explosionEffect>ExtinguisherExplosion</explosionEffect>
+    </projectile>
+    <modExtensions>
+      <li Class="EccentricProjectiles.ModExtension_ProjectileEffects">
+        <effects>
+          <li>Eccentric_ArtilleryMissileTrail</li>
+          <li>Eccentric_ArtilleryMissileSmoke</li>
+          <li>Eccentric_ArtilleryMissileExhaust</li>
+        </effects>
+        <stages>
+          <li>
+            <label>ejected</label>
+            <type>Launch</type>
+            <duration>24</duration>
+            <overrideInitialAngle>true</overrideInitialAngle>
+            <angle>-90</angle>
+            <initialHeight>0.1</initialHeight>
+            <heightOffset>2</heightOffset>
+            <heightFunction>EaseOutQuad</heightFunction>
+            <startSound>Eccentric_ArtilleryMissileEject</startSound>
+          </li>
+          <li>
+            <label>tracking</label>
+            <type>Terminal</type>
+            <speed>40</speed>
+            <positionFunction>EaseInCubic</positionFunction>
+            <arcFactor>12</arcFactor>
+            <startSound>Eccentric_ArtilleryMissileIgnite</startSound>
+          </li>
+        </stages>
+      </li>
+    </modExtensions>
+  </ThingDef>
+</Defs>

@@ -9,8 +9,7 @@
     <prerequisites>
       <li>Electricity</li>
     </prerequisites>
-    <!-- todo: figure out a proper researchview coordinate -->
-    <researchViewX>7.00</researchViewX>
-    <researchViewY>1.25</researchViewY>
+    <researchViewX>10.00</researchViewX>
+    <researchViewY>4.95</researchViewY>
   </ResearchProjectDef>
 </Defs>

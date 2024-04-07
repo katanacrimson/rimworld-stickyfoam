@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <!-- M43 PGM (stickyfoam) -->
+  <ThingDef ParentName="EccentricDefenseGrid_BaseMakeableOrdnance" Class="EccentricDefenseGrid.OrdnanceDef">
+    <defName>ETDG_Custom_Ordnance_M43PGM</defName>
+    <label>M43 PGM (stickyfoam)</label>
+    <labelShort>M43 Stickyfoam</labelShort>
+    <description>A precision-guided short-range missile packed with highly pressured sprayfoam for less-lethal mobility encumberance.\n\nIt is designed to be loaded into vertical missile launchers on military-grade starships and requires a guidance lock to fire.</description>
+    <uiOrder>560</uiOrder>
+    <graphicData>
+      <texPath>Eccentric/Things/Items/Ordnance_M43_Purple</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>360</MarketValue>
+    </statBases>
+    <costList>
+      <Steel>90</Steel>
+      <Chemfuel>40</Chemfuel>
+      <ComponentIndustrial>2</ComponentIndustrial>
+    </costList>
+    <ordnance>
+      <projectile>ETDG_Custom_Projectile_M43PGM</projectile>
+      <effectRadius>8.9</effectRadius>
+
+      <uiColor>(61,36,111)</uiColor>
+    </ordnance>
+    <comps>
+      <li Class="CompProperties_Explosive">
+        <explosiveRadius>8.9</explosiveRadius>
+        <explosiveDamageType>Stickyfoam</explosiveDamageType>
+        <explosiveExpandPerStackcount>0.4</explosiveExpandPerStackcount>
+        <startWickHitPointsPercent>0.7</startWickHitPointsPercent>
+        <postExplosionSpawnThingDef>Filth_Stickyfoam</postExplosionSpawnThingDef>
+        <postExplosionSpawnChance>1</postExplosionSpawnChance>
+        <postExplosionSpawnThingCount>3</postExplosionSpawnThingCount>
+        <applyDamageToExplosionCellsNeighbors>true</applyDamageToExplosionCellsNeighbors>
+        <explosionEffect>ExtinguisherExplosion</explosionEffect>
+        <wickTicks>30~60</wickTicks>
+      </li>
+    </comps>
+    <recipeMaker>
+      <researchPrerequisites>
+        <li>Stickyfoam</li>
+      </researchPrerequisites>
+    </recipeMaker>
+  </ThingDef>
+</Defs>
