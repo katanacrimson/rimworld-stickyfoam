@@ -1,9 +1,9 @@
 ## Stickyfoam changelog
 
 
-#### Unreleased
+#### v1.0.0-beta4
 
-- Rebuilt against updated krafs.rimworld.ref (1.5.4055-beta)
+- Rebuilt against updated krafs.rimworld.ref (1.5.4051)
 - Rebuilt against updated harmony (2.3.3)
 - Minor csproj cleanup
 - Now packaging LICENSE file

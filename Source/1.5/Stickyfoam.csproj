@@ -17,7 +17,7 @@
 		<Optimize>True</Optimize>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4055-beta" />
+		<PackageReference Include="Krafs.Rimworld.Ref" Version="1.5.4061" />
 		<PackageReference Include="Lib.Harmony" Version="2.3.3" />
 	</ItemGroup>
 </Project>
